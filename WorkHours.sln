@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkHours", "WorkHours\WorkHours.csproj", "{9C284990-1BB6-4840-AE58-D281C798149B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkHours.Data", "WorkHours.Data\WorkHours.Data.csproj", "{0AE5C6FE-392E-451C-8162-DEA52B39915C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkHours.Api", "WorkHours.Api\WorkHours.Api.csproj", "{D2780188-2B11-4B21-A332-9AFA62186174}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C284990-1BB6-4840-AE58-D281C798149B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C284990-1BB6-4840-AE58-D281C798149B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C284990-1BB6-4840-AE58-D281C798149B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C284990-1BB6-4840-AE58-D281C798149B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0AE5C6FE-392E-451C-8162-DEA52B39915C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0AE5C6FE-392E-451C-8162-DEA52B39915C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AE5C6FE-392E-451C-8162-DEA52B39915C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AE5C6FE-392E-451C-8162-DEA52B39915C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2780188-2B11-4B21-A332-9AFA62186174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2780188-2B11-4B21-A332-9AFA62186174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2780188-2B11-4B21-A332-9AFA62186174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2780188-2B11-4B21-A332-9AFA62186174}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
