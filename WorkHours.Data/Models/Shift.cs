@@ -6,9 +6,8 @@ namespace WorkHours.Data.Models
 {
     public class Shift
     {
-        public DateTime ScheduledStart { get; set; }
-        public DateTime ScheduledEnd { get; set; }
-        public DateTime ActualStart { get; set; }
-        public DateTime ActualEnd { get; set; }
+        public int Id { get; set; }
+        public DateTime Start { get; set; }
+        public DateTime End { get; set; }
     }
 }

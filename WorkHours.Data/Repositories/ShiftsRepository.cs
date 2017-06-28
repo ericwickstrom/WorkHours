@@ -5,7 +5,7 @@ using WorkHours.Data.Models;
 
 namespace WorkHours.Data.Repositories
 {
-    public class ShiftsRepository
+    public class ShiftsRepository : IShiftsRepository
     {
         private List<Shift> _repo;
 
@@ -17,15 +17,6 @@ namespace WorkHours.Data.Repositories
 
         private void populate()
         {
-            _repo.Add(new Shift { ScheduledStart = DateTime.Now, ScheduledEnd = DateTime.Now, ActualStart = DateTime.Now, ActualEnd = DateTime.Now });
-            _repo.Add(new Shift { ScheduledStart = DateTime.Now, ScheduledEnd = DateTime.Now, ActualStart = DateTime.Now, ActualEnd = DateTime.Now });
-            _repo.Add(new Shift { ScheduledStart = DateTime.Now, ScheduledEnd = DateTime.Now, ActualStart = DateTime.Now, ActualEnd = DateTime.Now });
-            _repo.Add(new Shift { ScheduledStart = DateTime.Now, ScheduledEnd = DateTime.Now, ActualStart = DateTime.Now, ActualEnd = DateTime.Now });
-            _repo.Add(new Shift { ScheduledStart = DateTime.Now, ScheduledEnd = DateTime.Now, ActualStart = DateTime.Now, ActualEnd = DateTime.Now });
-            _repo.Add(new Shift { ScheduledStart = DateTime.Now, ScheduledEnd = DateTime.Now, ActualStart = DateTime.Now, ActualEnd = DateTime.Now });
-            _repo.Add(new Shift { ScheduledStart = DateTime.Now, ScheduledEnd = DateTime.Now, ActualStart = DateTime.Now, ActualEnd = DateTime.Now });
-            _repo.Add(new Shift { ScheduledStart = DateTime.Now, ScheduledEnd = DateTime.Now, ActualStart = DateTime.Now, ActualEnd = DateTime.Now });
-            _repo.Add(new Shift { ScheduledStart = DateTime.Now, ScheduledEnd = DateTime.Now, ActualStart = DateTime.Now, ActualEnd = DateTime.Now });
         }
 
         public void AddShift(Shift shift)
@@ -33,7 +24,18 @@ namespace WorkHours.Data.Repositories
             _repo.Add(shift);
         }
 
-        public List<Shift> GetAllShifts()
+        public void RemoveShift(Shift shift)
+        {
+            _repo.Remove(shift);
+        }
+
+        public Shift GetShift(int Id)
+        {
+            return _repo.Find(s => s.Id == Id);
+        }
+
+
+        public IEnumerable<Shift> GetAllShifts()
         {
             return _repo;
         }

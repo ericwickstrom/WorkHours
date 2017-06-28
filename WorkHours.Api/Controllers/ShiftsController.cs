@@ -12,12 +12,12 @@ namespace WorkHours.Api.Controllers
     [Route("api/[controller]")]
     public class ShiftsController : Controller
     {
-        private ShiftsRepository _repo;
+        private IShiftsRepository _repo;
 
-        public ShiftsController()
+        public ShiftsController(IShiftsRepository repo)
         {
             // todo: change with DI
-            _repo = new ShiftsRepository();
+            _repo = repo;
         }
 
         [HttpGet]

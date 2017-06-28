@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using WorkHours.Data.Repositories;
 
 namespace WorkHours.Api
 {
@@ -28,6 +29,7 @@ namespace WorkHours.Api
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddSingleton<IShiftsRepository, ShiftsRepository>();
             services.AddMvc();
         }
 
